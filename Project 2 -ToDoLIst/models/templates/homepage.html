@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>TodoLIst</title>
+<link rel='stylesheet' href='static/style.css'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block body %}
+<h1 class="title_h1">Todod List</h1>
+<form action='/' method="POST" class="form_main">
+    <div class='input_todolist'>
+        <input type='text' name='todolist' class="input_text">
+        <input class="input_submit" type='submit'>
+
+    </div>
+</form>
+<div class="table_main">
+<table class="table_main_1">
+    <tr class="table_row">
+        <th>Tasks</th>
+    </tr>
+ 
+        {% if tasks %}
+            {% for msg in tasks %}
+            <tr class="table_row">
+
+                <td class="content">{{msg.content}}</td>
+                <td><a href="/delete/{{msg.id}}">Delete</a></td>
+                <td><a href="/update/{{msg.id}}">Update</a></td>
+            </tr>
+            {%endfor%}
+        {% endif %}
+ 
+   
+    {% endblock %}
+</table>
+</div>
