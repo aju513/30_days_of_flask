@@ -1,0 +1,54 @@
+*{
+    margin:0px;
+    font-family: 'Raleway', sans-serif;
+     
+}
+
+.weather_h1{
+    margin:20px;
+    padding:20px;
+    font-size: 40px;
+    font-weight: bold;
+    
+
+}
+
+.input_boxes{
+    background-color:gainsboro;
+}
+.input_code{
+    width:20%;
+    height:30px;
+    border-color: grey;
+    border-radius: 10px;
+    padding:20px;
+    margin:20px;
+    position:relative;
+    left:40px;
+
+
+}
+.input_submit{
+
+    width:6%;
+    height:30px;
+    border-radius:10px;
+    padding:20px;
+    margin:32px;
+    position:relative;
+    top:8px;
+    font-size:16px;
+    color:black;
+    text-align: center;
+
+}
+.input_submit:hover{
+    font-weight: bold;
+}
+.content{
+    color:black;
+    padding:32px;
+    margin:10px;
+    font-size: 40px;
+    font-weight: bold;
+}
