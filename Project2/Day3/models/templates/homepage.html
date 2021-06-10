@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="weather_h1">
+    <h1 class="Weater">Weather</h1>
+</div>
+
+<div class="input_boxes">
+    
+    <form method="POST" >
+        <input type="text" value="" name="code" class="input_code">
+        <input type="submit" value="Submit" class="input_submit">
+    </form>
+</div>
+
+<div class="content">
+    <p>{{get_country}}</p>
+    <p>Temperature: {{(id)-273}}</p> 
+</div>
+
+{% endblock %}
