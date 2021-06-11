@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<link rel="stylesheet" href="static/style.css">	
+{% endblock %}
+
+{% block body %}
+
+	<div class="first">
+			
+		<div class="menu_search">
+			<p class="menu">Menu</p>
+			<p class="search">Search</p>
+		</div>
+
+		<div class="mid">
+			<p>CRYPTOSLATE</p>
+		</div>
+
+		<div class="last">
+			<div class="buyonbit">
+				<p>Buy on ByBit</p>
+			</div>
+			<div class="signin">
+				<p>Sign In</p>
+			</div>
+			<div class="gededge">
+				<p>Ged Edge</p>
+			</div>
+		</div>
+
+	</div>
+	<div class="container_1">
+		<p>Bybit's Bonus Bash $1,000 bonus to be Won! Join Now</p>
+	</div>
+	<div class="coin_Rankings">
+		<p>Coin Rankings</p>
+	</div>
+	
+	<div class="top_Cryptocurrency">
+		<p>Top Cryptocurrencies by Market Capitalization</p>
+	</div>
+
+	<div class="boxes">
+		<table>
+			<tr >
+
+			<th class="boxes_1">
+				<p>{{global_data['totalCoins']}}</p>
+				<p class="boxes_text">Total Coins</p>
+			</th>
+			<th class="boxes_1"><p>{{global_data['totalMarkets']}}</p><p class="boxes_text">Total Markets</p></th>
+			<th class="boxes_1"><p>{{global_data['totalExchanges']}}</p><p class="boxes_text">Total Exchange</p></th>
+			<th class="boxes_1"><p>{{global_data['totalMarketCap']}}</p><p class="boxes_text">Total Market Cap</th>
+			<th class="boxes_1"><p>{{global_data['total24hVolume']}}</p><p class="boxes_text">Total 24 hr Volume</p></th>
+			</tr>
+		</table>
+	</div>
+	<div class ="boxes_2">
+		<table>
+			<tr class="box">
+				<th>#</th>
+				<th class="name">Name</th>
+				<th>MarketCap</th>
+				<th>Price</th>
+				<th>Number of Exchanges</th>
+				<th>Volume</th>
+				<th>Change</th>
+				<th>All Time High</th>
+			</tr>
+			<div>	{% for i in crypto_data%}
+				<tr>
+					<td>{{i["rank"]}}</td>
+					<td class="name"><p>{{i["name"]}}</p></td>
+					<td>{{i["marketCap"]}}</td>
+					<td>{{(i['price'])}}</td>
+					<td>{{i['numberOfExchanges']}}</td>
+					<td>{{i['volume']}}</td>
+					<td>{{i['change']}}</td>
+					<td>{{(i["allTimeHigh"]["price"])}}</td>
+					
+				</tr>
+				{% endfor %}
+			</div>
+
+		</table>
+
+	</div>
+{% endblock %}
