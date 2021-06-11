@@ -10,7 +10,7 @@ crypto=Crypto()
 def homepage():
     crypto_data=crypto.get_all()
     global_data = globaldata.getGlobalstats()
-    return render_template('homepage.html',global_data=global_data)
+    return render_template('homepage.html',global_data=global_data,crypto_data=crypto_data)
 
 
 if __name__=="__main__":

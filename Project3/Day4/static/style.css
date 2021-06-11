@@ -101,4 +101,19 @@ table {
 .boxes_1{
 	 font-size: 30px;
 	 padding:10px;
+
+	 border-radius: 10px;
+	border-width: 5px;
+
 }
+.boxes_text{
+	font-size: 16px;
+}
+.boxes_2{
+	margin:20px;
+	text-align: center;
+}
+.name{
+	text-align: start;
+}
+ 
