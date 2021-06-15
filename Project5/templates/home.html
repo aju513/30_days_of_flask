@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	<title>Quotes Generator</title>
+	<link href="static/css/style.css" rel="stylesheet">
+    </head>
+    <body> 
+	<image  class="image" src="{{url_for('static',filename = 'image/'+value+'.jpg')}}" >
+	<p class="quotes">{{quotes}}</p>
+	<form >
+	<input type="submit" class="text"> 
+	</form>
+    </body>
+</html>

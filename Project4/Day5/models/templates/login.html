@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block head%}
+<link href="static/style.css" rel="stylesheet">
+{% endblock %}
+
+{% block body%} 
+{% with messages= get_flashed_messages(with_categories=true)%}
+		{% if messages %}
+				{{message}}
+		{% endif%}
+	{% endwith%}
+<div class="form_box1">
+	<form method="POST" class="form_box" >
+	{{ form1.csrf_token }}
+	{% if form1.email.errors%}
+		{% for msg in form1.email.errors %}
+			{{msg}}
+		{% endfor%}	
+	{% endif%}
+
+	{{ form1.email.label (class="text")}} 
+	{{ form1.email (class="box")}} 
+	
+	{% if form1.password1.errors%}
+		{% for msg in form1.password1.errors %}
+			{{msg}}
+		{% endfor%}	
+	{% endif%}
+	{{ form1.password1.label (class="text")}} 
+	{{ form1.password1 (class="box")}} 
+	{{ form1.submit (class="text" ,id="submit") }}		
+	</form>
+</div>
+<br>
+<div class="already_have">
+	<p>Don't have a an account?<a href="/register">Register</a></p>
+	
+</div>
+
+{% endblock %}

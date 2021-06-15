@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block head%}
+<link href="static/style.css" rel="stylesheet">
+{% endblock %}
+
+{% block body%} 
+{% with messages = get_flashed_messages(with_categories=true) %}
+	{% if messages %}
+		{% for category,msg in messages%}
+			<p>{{msg}}</p>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+<div class="form_box1">
+	<form method="POST" class="form_box" >
+	{{ form.csrf_token }}
+	{% if form.username.errors %}
+		{% for error in form.username.errors%}
+			{{error}}
+		{% endfor%}
+	{% endif %}
+	{{ form.username.label (class="text")}} 
+	{{ form.username (class="box")}} 
+	{% if form.email.errors %}
+		{% for error in form.email.errors%}
+			{{error}}
+		{% endfor%}
+	{% endif %}
+	{{ form.email.label (class="text")}} 
+	{{ form.email (class="box")}} 
+	{% if form.password1.errors %}
+		{% for error in form.password1.errors%}
+			{{error}}
+		{% endfor%}
+	{% endif %}
+	{{ form.password1.label (class="text")}} 
+	{{ form.password1 (class="box")}} 
+	{% if form.password2.errors %}
+		{% for error in form.password2.errors%}
+			{{error}}
+		{% endfor%}
+	{% endif %}
+	{{ form.password2.label(class="text")}} 
+	{{ form.password2 (class="box")}} 
+	{{ form.submit (class="text" ,id="submit") }}		
+	</form>
+</div>
+<br>
+<div class="already_have">
+	<p>Already have a an account?<a href="/login">Login</a></p>
+	
+</div>
+
+{% endblock %}
