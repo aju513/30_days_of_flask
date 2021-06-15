@@ -21,13 +21,13 @@
 	{{ form1.email.label (class="text")}} 
 	{{ form1.email (class="box")}} 
 	
-	{% if form1.password1.errors%}
-		{% for msg in form1.password1.errors %}
+	{% if form1.password.errors%}
+		{% for msg in form1.password.errors %}
 			{{msg}}
 		{% endfor%}	
 	{% endif%}
-	{{ form1.password1.label (class="text")}} 
-	{{ form1.password1 (class="box")}} 
+	{{ form1.password.label (class="text")}} 
+	{{ form1.password (class="box")}} 
 	{{ form1.submit (class="text" ,id="submit") }}		
 	</form>
 </div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<title>Homepage</title>
+</head>
+<body>
+  <div>
+    <table>
+        {% for i in temp %}
+          <div> {{i['name']}}{{i['symbol']}}</div>
+          <div>{{i['rank']}}</div> 
+        {% endfor%}
+    </table>
+  </div> 
+</body>
+</html>

@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+
+}
+.title_h1{
+    font-family: 'Raleway', sans-serif; ;
+    padding: 16px;
+    margin:16px;
+}
+.form_main{
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin:10px;
+    position:relative;
+    bottom:16px;
+    left:20px;
+}
+.input_text{
+    
+    padding:10px;
+    border-color: gray;
+    border-radius: 10px;
+    width:40%
+    
+}
+.input_submit{
+    width:100px;
+    height:40px;
+    border-radius: 30px;
+    background-color: white;
+    border-color:white
+
+}
+.input_submit:hover{
+    font-weight: bold;
+
+}
+ table,td, th {
+    border: 1px solid #aaa;
+}
+
+.table_main{
+    font-family: 'Raleway', sans-serif;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 5px;
+    width:90%;
+    display:flex;
+    justify-content: center;
+
+
+   
+    
+}
+.table_main_1{
+    width:90%;
+    position:relative;
+    right:15px;
+}
+.content{
+    width:90%
+
+}
